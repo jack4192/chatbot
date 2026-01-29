@@ -423,7 +423,8 @@ def main():
         st.rerun()
 
     # 모든 필수값(소득 2개) 입력되면 계산 영역 표시
-    ready = (inp.income_avg_3m is not None) and (inp.income_avg_12m is not None)
+    #ready = (inp.income_avg_3m is not None) and (inp.income_avg_12m is not None)
+    ready = (next_key is None)  # 모든 질문이 끝났을 때만
     if ready:
         st.divider()
         st.subheader("자가진단 결과")

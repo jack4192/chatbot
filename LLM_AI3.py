@@ -37,14 +37,13 @@ def compute_indices(
 
     if S >= 70:
         tier = "A"
-        verdict = "실질 실업 가능성 높음 → 우선 검토 대상"
+        verdict = "실업 상태로 판단될 가능성 높음"
     elif S >= 50:
         tier = "B"
-        verdict = "실업 위험 상태 → 추가 확인(서류 검토 병행)"
+        verdict = "실업 상태로 판단될 가능성 존재"
     else:
         tier = "C"
-        verdict = "현 입력 기준, 실업 상태로 판단되기 어려움"
-
+        verdict = "현 입력 기준, 실업 상태로 판단될 가능성 낮음"
     return {
         "Ai": Ai, "Ii": Ii, "Ri": Ri, "S": S, "tier": tier, "verdict": verdict,
         "rA": rA, "rI": rI, "g": g, "p": p, "w": w
@@ -414,3 +413,4 @@ else:
         st.button("처음부터 다시 입력", on_click=lambda: setattr(st.session_state, "step", 1))
 
     st.caption("주의: 본 도구는 행정 판단을 대체하지 않으며, 실제 수급 요건/증빙은 관할 기관 안내를 따르세요.")
+

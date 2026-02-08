@@ -4,7 +4,7 @@ from typing import Optional, Dict, Any, List
 # =========================
 # Config
 # =========================
-st.set_page_config(page_title="실업급여 준비봇", layout="wide")
+st.set_page_config(page_title="실업급여 서포터", layout="wide")
 EPS = 1e-9
 
 # =========================
@@ -222,7 +222,7 @@ for k, v in defaults.items():
 # =========================
 # Header
 # =========================
-st.title("실업급여 준비봇")
+st.title("실업급여 서포터")
 st.caption("입력은 단계별로 진행되고, 계산 후 실엽급여 지원 가능성을 결과 페이지에서 2)판정·3)서류·4)챗으로 함께 표시됩니다.")
 
 # =========================
@@ -413,6 +413,7 @@ else:
         st.button("처음부터 다시 입력", on_click=lambda: setattr(st.session_state, "step", 1))
 
     st.caption("주의: 본 도구는 행정 판단을 대체하지 않으며, 실제 수급 요건/증빙은 관할 기관 안내를 따르세요.")
+
 
 
 
